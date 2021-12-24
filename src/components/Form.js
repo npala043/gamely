@@ -11,7 +11,7 @@ const Form = (props) => {
 
     return (
         <div>
-            <form onSubmit={handle()} action="#">
+            <form>
                 <Collapse>
                     <Panel header="What is your preferred rating?">
                         <p>Lorem ipsum</p>
@@ -29,7 +29,7 @@ const Form = (props) => {
                         <p>Lorem ipsum</p>
                     </Panel>
                 </Collapse>
-                <input type="submit">Submit</input>
+                <button onClick={handle()}>Submit</button>
             </form>
 
         </div>
