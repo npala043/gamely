@@ -1,11 +1,11 @@
 import './App.css';
+import Header from './components/Header';
 import Form from './components/Form';
-import logo from '';
 
 function App() {
   return (
     <div className="App">
-      {/* <img={}/> */}
+      <Header/>
       <Form/>
     </div>
   );
