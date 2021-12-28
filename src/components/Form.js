@@ -1,6 +1,6 @@
 import { Collapse, Radio } from 'antd';
 import 'antd/dist/antd.css';
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import '../App.css'
 const { Panel } = Collapse;
 
@@ -8,10 +8,11 @@ const Form = (props) => {
 
     const handle = () => {
         // handle form submission
+        //props.showResults();
         console.log("Form submitted!!");
-        const[questionDeatils, setquestionDetails] = useState({
-            example: "",
-        });
+        // const[questionDeatils, setquestionDetails] = useState({
+        //     example: "",
+        // });
     }
 
     return (
