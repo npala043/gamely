@@ -4,20 +4,24 @@ const Games = (props) => {
 
     let currGames = [];
 
-    if (props.games.length >= 3) {
-        for (let i = 0; i < 3; i++) {
-            currGames.push(props.games[i]);
-        }
-    } else if (props.games.length > 0) {
-        currGames = props.games;
-    } else {
+    if (props.games.length === 0) {
         // no more games to display!
-        alert("No more games to display!");
+        console.log("no more games to display");
+    }
+
+    for (let i = 0; i < 3; i++) {
+        // as there are no indexOutOfBounds errors, check if index returns 'undefined'
+        if (typeof props.games[i] !== "undefined") {
+            currGames.push(props.games[i].data);
+        }
     }
 
     return (
         <div className="gamesDiv">
-            {currGames.map(g => <GameCard game={g} key={g.id} />)}
+            {currGames.length > 0 ?
+                currGames.map(g => <GameCard game={g} key={g.id} />)
+                :
+                <h2>You've reached the end!</h2>}
         </div>
     )
 }

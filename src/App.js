@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import axios from 'axios';
 
 import './App.css';
@@ -10,6 +10,17 @@ import tags from './assets/json/tags.json';
 import genres from './assets/json/genres.json';
 
 function App() {
+
+  // const url = 'https://api.rawg.io/api/platforms?key=41501910137e44f584184130089ac053';
+  // axios.get(url)
+  //     .then(response => {
+  //       localStorage.setItem("platforms", JSON.stringify(response.data.results));
+  //     })
+
+  useEffect(() => {
+
+  }, [])
+
 
   tags.sort((a, b) => a.id - b.id);
   genres.sort((a, b) => {
