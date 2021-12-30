@@ -1,77 +1,76 @@
 import { Collapse, Radio } from 'antd';
 import 'antd/dist/antd.css';
-// import React, { useState } from "react";
-import '../App.css'
+import React, { useState } from "react";
+import '../App.css';
+//import Results from "./Results"
 const { Panel } = Collapse;
 
+
 const Form = (props) => {
+
+    let ratings = [];
+    let platforms = [];
+    let genres = [];
+    let tags = [];
 
     const handle = () => {
         // handle form submission
         //props.showResults();
         console.log("Form submitted!!");
-        // const[questionDeatils, setquestionDetails] = useState({
-        //     example: "",
-        // });
+    }
+
+    const changeButton = (e, tagArray) => {
+        let index;
+        if(e.target.checked) {
+            tagArray.push(+e.target.value)
+        }
+        else {
+            index = tagArray.indexOf(+e.target.value)
+            tagArray.splice(index, 1)
+        }
+        // console.log(tagArray[0])
     }
 
     return (
         <div>
-            <div>
-                Find your next
-                Favourite Game
-                <input type= "button" value="Begin Questionare"/>
-            </div>
-            <form onSubmit={handle()}>
-                <Collapse>
-                    <Panel header="What is your preferred rating?">
-                    <Radio.Group defaultValue="a" buttonStyle="solid">
-                        <Radio.Button value="a">[E]Everyone</Radio.Button>
-                        <Radio.Button value="b">Teen [18+]</Radio.Button>
-                        <Radio.Button value="c">Mature [18+]</Radio.Button>
-                        <Radio.Button value="d">No Preference</Radio.Button>
-                    </Radio.Group>
-                    </Panel>
-                    <Panel header="Who will you be playing with?">
-                    <Radio.Group defaultValue="a" buttonStyle="solid">
-                        <Radio.Button value="a">Alone</Radio.Button>
-                        <Radio.Button value="b">Co-op</Radio.Button>
-                        <Radio.Button value="c">Multiplayer</Radio.Button>
-                        <Radio.Button value="d">No Preference</Radio.Button>
-                    </Radio.Group>
-                    </Panel>
-                    <Panel header="Which console(s)?">
-                    <Radio.Group defaultValue="a" buttonStyle="solid">
-                        <Radio.Button value="a">Nintendo Switch</Radio.Button>
-                        <Radio.Button value="b">Mobile (Android/IOS)</Radio.Button>
-                        <Radio.Button value="c">Xbox</Radio.Button>
-                        <Radio.Button value="d">Playstation</Radio.Button>
-                    </Radio.Group>
-                    </Panel>
-                    <Panel header="What price range?">
-                    <Radio.Group defaultValue="a" buttonStyle="solid">
-                        <Radio.Button value="a">Free</Radio.Button>
-                        <Radio.Button value="b">Less than $10 USD</Radio.Button>
-                        <Radio.Button value="c">$10 - $30 USED</Radio.Button>
-                        <Radio.Button value="d">$31+ USD</Radio.Button>
-                        <Radio.Button value="e">No Preference</Radio.Button>
-                    </Radio.Group>
-                    </Panel>
-                    <Panel header="Select your favourite genre(s)">
-                    <div id="ck-button">
-                        <label>
-                            <input type="checkbox" value="A tag/genre"/><span>EXample tag</span>
-                            <input type="checkbox" value="B tag/genre"/><span>EXample tag</span>
-                            <input type="checkbox" value="C tag/genre"/><span>EXample tag</span>
-                            <input type="checkbox" value="D tag/genre"/><span>EXample tag</span>
-                            <input type="checkbox" value="E tag/genre"/><span>EXample tag</span>
-                            <input type="checkbox" value="F tag/genre"/><span>EXample tag</span>
-                        </label>
-                    </div>
-                    </Panel>
-                </Collapse>
-                <input type="submit" value="Submit"></input>
-            </form>
+            {console.log(tags[0])}
+            <Collapse>
+                <Panel header="What is your preferred rating?">
+                    <input type="checkbox" value="0" onChange={(e) => changeButton(e, ratings)}>E[Everyone]</input>
+                    <input type="checkbox" value="1" onChange={(e) => changeButton(e, ratings)}>Teen[Ages 13+]</input>
+                    <input type="checkbox" value="2" onChange={(e) => changeButton(e, ratings)}>Mature[Ages 18+]</input>
+                    <input type="checkbox" value="" onChange={(e) => changeButton(e, ratings)}>No preference</input>
+                </Panel>
+
+                <Panel header="How many players?">
+                    <input type="checkbox" value="0" onChange={(e) => changeButton(e, tags)}>Single-Player</input>
+                    <input type="checkbox" value="1" onChange={(e) => changeButton(e, tags)}>Co-op(up to 4 players)</input>
+                    <input type="checkbox" value="2" onChange={(e) => changeButton(e, tags)}>Online Multiplayer</input>
+                    <input type="checkbox" value="" onChange={(e) => changeButton(e, tags)}>No preference</input>
+                </Panel>
+               
+                <Panel header="What price range?">
+                    <input type="checkbox" value="0" onChange={(e) => changeButton(e, tags)}>E[Everyone]</input>
+                    <input type="checkbox" value="1" onChange={(e) => changeButton(e, tags)}>Teen[Ages 13+]</input>
+                    <input type="checkbox" value="2" onChange={(e) => changeButton(e, tags)}>Mature[Ages 18+]</input>
+                    <input type="checkbox" value="" onChange={(e) => changeButton(e, tags)}>No preference</input>
+                </Panel>
+                <Panel header="Select your favourite genre(s)">
+                    <input type="checkbox" value="0" onChange={(e) => changeButton(e, genres)}>E[Everyone]</input>
+                    <input type="checkbox" value="1" onChange={(e) => changeButton(e, genres)}>Teen[Ages 13+]</input>
+                    <input type="checkbox" value="2" onChange={(e) => changeButton(e, genres)}>Mature[Ages 18+]</input>
+                    <input type="checkbox" value="" onChange={(e) => changeButton(e, genres)}>No preference</input>
+                </Panel>
+
+                <Panel header="Which console(s)?">
+                    <input type="checkbox" value="0" onChange={(e) => changeButton(e, platforms)}>E[Everyone]</input>
+                    <input type="checkbox" value="1" onChange={(e) => changeButton(e, platforms)}>Teen[Ages 13+]</input>
+                    <input type="checkbox" value="2" onChange={(e) => changeButton(e, platforms)}>Mature[Ages 18+]</input>
+                    <input type="checkbox" value="" onChange={(e) => changeButton(e, platforms)}>No preference</input>
+                </Panel>
+
+            </Collapse>
+            {/* <button onClick={Results}>Show my Games!</button> */}
         </div>
     )
 }
