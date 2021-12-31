@@ -70,7 +70,7 @@ const Form = (props) => {
                 </Panel>
 
             </Collapse>
-            {/* <button onClick={Results}>Show my Games!</button> */}
+            <button onClick={Results}>Show my Games!</button>
         </div>
     )
 }
