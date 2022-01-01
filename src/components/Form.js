@@ -19,7 +19,6 @@ const Form = (props) => {
 
 //Takes user to showResults
     const handleSubmit = (ratings, platforms, genres, tags) => {
-        // handle form submission
         props.showResults(ratings, platforms, genres, tags);
         console.log("Form submitted!!");
     }
