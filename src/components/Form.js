@@ -8,6 +8,7 @@ const { Panel } = Collapse;
 
 const Form = (props) => {
 
+
     let ratings = [];
     let platforms = [];
     let genres = [];
@@ -70,7 +71,7 @@ const Form = (props) => {
                 </Panel>
 
             </Collapse>
-            <button onClick={Results}>Show my Games!</button>
+            <button onClick={Results={ratings, platforms, genres, tags}}>Show my Games!</button>
         </div>
     )
 }
