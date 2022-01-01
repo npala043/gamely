@@ -45,6 +45,7 @@ function App() {
     <div className="App">
       <Header />
       {/* if there are any filters selected, render Results, otherwise render Form the generate filters */}
+      {/* TODO: checking if all are empty is probably not the best way to do this */}
       {filters.ratings.length !== 0 && filters.platforms.length !== 0 && filters.genres.length !== 0 && filters.tags.length !== 0 ?
         <Results showForm={showForm} filters={filters} />
         :
