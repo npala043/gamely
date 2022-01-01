@@ -28,8 +28,11 @@ border-radius: 30px;
 transition: transform 100ms;
 }
 
+.pageDiv {
+  height: 2000px;
+}
 
-button {
+/*button {
 padding: 12px 16px;
 
 width: 126px;
@@ -38,7 +41,7 @@ left: 20px;
 top: 20px;
 
 background: rgba(148, 94, 232, 0.2);
-/* Label Secondary */
+
 
 border: 2px solid #945EE8;
 box-sizing: border-box;
@@ -53,11 +56,12 @@ height: 43px;
 left: 158px;
 top: 20px;
 
-/* Label Tertiary */
+
 
 background: #BB86FC;
 border-radius: 30px;
-}
+}*/
+
 /* ------------------------------- Games ------------------------------- */
 .gamesDiv {
   display:grid;
