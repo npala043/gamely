@@ -17,7 +17,7 @@ const Form = (props) => {
 
     const handle = () => {
         // handle form submission
-        //props.showResults();
+        props.showResults();
         console.log("Form submitted!!");
     }
 
