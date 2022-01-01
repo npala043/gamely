@@ -2,7 +2,8 @@ import { Collapse, Radio } from 'antd';
 import 'antd/dist/antd.css';
 import React, { useState } from "react";
 import '../App.css';
-//import Results from "./Results"
+import Results from "./Results"
+import Games from "./Games";
 const { Panel } = Collapse;
 
 
@@ -71,7 +72,7 @@ const Form = (props) => {
                 </Panel>
 
             </Collapse>
-            <button onClick={Results={ratings, platforms, genres, tags}}>Show my Games!</button>
+            <button onClick={Games={ratings, platforms, genres, tags}}>Show my Games!</button>
         </div>
     )
 }
