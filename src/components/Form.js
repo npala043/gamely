@@ -59,15 +59,15 @@ const Form = (props) => {
                 </Panel>
 
                 <Panel header="How many players?">
-                    <input type="checkbox" value="singleplayer" onChange={(e) => changeButton(e, tags)} />Single-Player
-                    <input type="checkbox" value="co-op" onChange={(e) => changeButton(e, tags)} />Co-op(up to 4 players)
-                    <input type="checkbox" value="multiplayer" onChange={(e) => changeButton(e, tags)} />Online Multiplayer
+                    <input type="checkbox" value="31" onChange={(e) => changeButton(e, tags)} />Single-Player
+                    <input type="checkbox" value="18" onChange={(e) => changeButton(e, tags)} />Co-op(up to 4 players)
+                    <input type="checkbox" value="7" onChange={(e) => changeButton(e, tags)} />Online Multiplayer
                     <input type="checkbox" value="" onChange={(e) => changeButton(e, tags)} />No preference
                 </Panel>
 
                 <Panel header="How old do you prefer your games?">
-                    <input type="checkbox" value="2010-01-01" onChange={(e) => changeButton(e, tags)} />Classic (6 years and older)
-                    <input type="checkbox" value="2018-12-31" onChange={(e) => changeButton(e, tags)} />Recent (Less than 5 years old)
+                    <input type="checkbox" value="0" onChange={(e) => changeButton(e, tags)} />Classic (6 years and older)
+                    <input type="checkbox" value="1" onChange={(e) => changeButton(e, tags)} />Recent (Less than 5 years old)
                     <input type="checkbox" value="" onChange={(e) => changeButton(e, tags)} />No preference
                 </Panel>
                 <Panel header="Select your favourite genre(s)">
