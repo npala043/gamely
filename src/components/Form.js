@@ -2,8 +2,6 @@ import { Collapse, Radio } from 'antd';
 import 'antd/dist/antd.css';
 import React, { createRef, useState } from "react";
 import '../App.css';
-import Results from "./Results"
-import Games from "./Games";
 const { Panel } = Collapse;
 
 
