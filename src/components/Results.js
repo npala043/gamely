@@ -67,7 +67,7 @@ const Results = (props) => {
             <h1>Shuffle through some new games!</h1>
             <Games games={games} />
             <div>
-                <button onClick={props.showForm}>Start over</button><button onClick={shuffle}>Shuffle me!</button>
+                <button style={{color: 'white', backgroundColor: 'black', borderColor: 'purple'}} onClick={props.showForm}>Start over</button> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <button onClick={shuffle}>Shuffle me!</button>
             </div>
             <List />
         </div>

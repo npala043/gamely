@@ -4,7 +4,7 @@ import React, { createRef, useState } from "react";
 import '../App.css';
 import Results from "./Results"
 import Games from "./Games";
-const { Panel } = Collapse;
+
 
 
 const Form = (props) => {
@@ -19,6 +19,7 @@ const Form = (props) => {
 
 //Takes user to showResults
     const handleSubmit = (ratings, platforms, genres, tags) => {
+        console.log(ratings)
         // handle form submission
         props.showResults(ratings, platforms, genres, tags);
         console.log("Form submitted!!");
@@ -45,33 +46,40 @@ const Form = (props) => {
     return (
         <div>
             <div className="pageDiv">
-                <p>Find your next</p>
-                <p>Favourite Game</p>
+                <h1 style={{color: 'white'}}>Find your next</h1>
+                <h1 style={{color: 'cyan', paddingTop: 0}}>Favourite Game</h1>
                 <button onClick={scrollToForm}>Begin Questionaire</button>
             </div>
 
             <div ref={scrollDiv}>Form start</div>
-            <Collapse>
-                <Panel header="What is your preferred rating?">
+                <div>
+                    <p>What is your preferred rating?</p>
                     <input type="checkbox" value="0" onChange={(e) => changeButton(e, ratings)}/>E[Everyone]
                     <input type="checkbox" value="1" onChange={(e) => changeButton(e, ratings)}/>Teen[Ages 13+]
                     <input type="checkbox" value="2" onChange={(e) => changeButton(e, ratings)}/>Mature[Ages 18+]
                     <input type="checkbox" value="" onChange={(e) => changeButton(e, ratings)}/>No preference
-                </Panel>
+                </div>
+                <br/>
 
-                <Panel header="How many players?">
+                <div>
+                    <p>How many players?</p>
                     <input type="checkbox" value="singleplayer" onChange={(e) => changeButton(e, tags)}/>Single-Player
                     <input type="checkbox" value="co-op" onChange={(e) => changeButton(e, tags)}/>Co-op(up to 4 players)
                     <input type="checkbox" value="multiplayer" onChange={(e) => changeButton(e, tags)}/>Online Multiplayer
                     <input type="checkbox" value="" onChange={(e) => changeButton(e, tags)}/>No preference
-                </Panel>
+                </div>
+                <br/>
                
-                <Panel header="How old do you prefer your games?">
+                <div>
+                    <p>How old do you prefer your games?</p>
                     <input type="checkbox" value="2010-01-01" onChange={(e) => changeButton(e, tags)}/>Classic (6 years and older)
                     <input type="checkbox" value="2018-12-31" onChange={(e) => changeButton(e, tags)}/>Recent (Less than 5 years old)
                     <input type="checkbox" value="" onChange={(e) => changeButton(e, tags)}/>No preference
-                </Panel>
-                <Panel header="Select your favourite genre(s)">
+                </div>
+                <br/>
+
+                <div>
+                    <p>Select your favourite genre(s)</p>
                     <input type="checkbox" value="4" onChange={(e) => changeButton(e, genres)}/>Action
                     <input type="checkbox" value="51" onChange={(e) => changeButton(e, genres)}/>indie
                     <input type="checkbox" value="3" onChange={(e) => changeButton(e, genres)}/>Adventure
@@ -92,17 +100,19 @@ const Form = (props) => {
                     <input type="checkbox" value="34" onChange={(e) => changeButton(e, genres)}/>Educational
                     <input type="checkbox" value="17" onChange={(e) => changeButton(e, genres)}/>Card
                     <input type="checkbox" value="" onChange={(e) => changeButton(e, genres)}/>No preference
-                </Panel>
+                </div>
+                <br/>
 
-                <Panel header="Which console(s)?">
+                <div>
+                    <p>Which console(s)?</p>
                     <input type="checkbox" value="3" onChange={(e) => changeButton(e, platforms)}/>Mobile (android/ios)
                     <input type="checkbox" value="7" onChange={(e) => changeButton(e, platforms)}/>Nintendo Switch
                     <input type="checkbox" value="1" onChange={(e) => changeButton(e, platforms)}/>Xbox
                     <input type="checkbox" value="18" onChange={(e) => changeButton(e, platforms)}/>Playstation
                     <input type="checkbox" value="4" onChange={(e) => changeButton(e, platforms)}/>Desktop PC
-                </Panel>
+                </div>
+                <br/>
 
-            </Collapse>
             <button onClick={(e) => handleSubmit(ratings, platforms, genres, tags)}>Show my Games!</button>
         </div>
     )
