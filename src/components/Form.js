@@ -2,33 +2,29 @@ import { Collapse, Radio } from 'antd';
 import 'antd/dist/antd.css';
 import React, { createRef, useState } from "react";
 import '../App.css';
-import Results from "./Results"
-import Games from "./Games";
-
+const { Panel } = Collapse;
 
 
 const Form = (props) => {
 
     let scrollDiv = createRef();
 
-//Arrays of tags to throw into the API
+    //Arrays of tags to throw into the API
     let ratings = [];
     let platforms = [];
     let genres = [];
     let tags = [];
 
-//Takes user to showResults
+    //Takes user to showResults
     const handleSubmit = (ratings, platforms, genres, tags) => {
-        console.log(ratings)
-        // handle form submission
         props.showResults(ratings, platforms, genres, tags);
         console.log("Form submitted!!");
     }
 
-//Loads the arrays with the tags from the checkboxes
+    //Loads the arrays with the tags from the checkboxes
     const changeButton = (e, tagArray) => {
         let index;
-        if(e.target.checked) {
+        if (e.target.checked) {
             tagArray.push(+e.target.value)
         }
         else {
@@ -38,9 +34,9 @@ const Form = (props) => {
         console.log(tagArray)
     }
 
-//Scroll to form
+    //Scroll to form
     const scrollToForm = () => {
-        scrollDiv.current.scrollIntoView({behaviour: "smooth"});
+        scrollDiv.current.scrollIntoView({ behaviour: "smooth" });
     }
 
     return (
@@ -52,6 +48,7 @@ const Form = (props) => {
             </div>
 
             <div ref={scrollDiv}>Form start</div>
+            
                 <div>
                     <p>What is your preferred rating?</p>
                     <input type="checkbox" value="0" onChange={(e) => changeButton(e, ratings)}/>E[Everyone]

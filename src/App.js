@@ -1,47 +1,53 @@
-import { React, useEffect, useState } from 'react';
-import axios from 'axios';
+import { React, useState } from 'react';
 
 import './App.css';
 import Header from './components/Header';
 import Form from './components/Form';
 import Results from './components/Results';
 
-import tags from './assets/json/tags.json';
-import genres from './assets/json/genres.json';
-
 function App() {
 
-  // const url = 'https://api.rawg.io/api/platforms?key=41501910137e44f584184130089ac053';
-  // axios.get(url)
-  //     .then(response => {
-  //       localStorage.setItem("platforms", JSON.stringify(response.data.results));
-  //     })
+  // filters is an object consisting of 4 arrays
+  const [filters, setFilters] = useState(
+    {
+      ratings: [],
+      platforms: [],
+      genres: [],
+      tags: []
+    }
+  );
 
-  useEffect(() => {
-
-  }, [])
-
-
-  tags.sort((a, b) => a.id - b.id);
-  genres.sort((a, b) => {
-    return a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1;
-  });
-
-  const [displayResults, setDisplayResults] = useState(false);
-
-  const showResults = () => {
-    setDisplayResults(true);
+  // when the user presses the submit button after the form, call this to update the filters and render Results
+  const showResults = (ratings, platforms, genres, tags) => {
+    setFilters(
+      {
+        ratings: ratings,
+        platforms: platforms,
+        genres: genres,
+        tags: tags
+      }
+    );
   }
 
+  // reset filters and thus render Form
   const showForm = () => {
-    setDisplayResults(false);
+    setFilters(
+      {
+        ratings: [],
+        platforms: [],
+        genres: [],
+        tags: []
+      }
+    );
   }
 
   return (
     <div className="App">
       <Header />
-      {displayResults ?
-        <Results showForm={showForm}/>
+      {/* if there are any filters selected, render Results, otherwise render Form the generate filters */}
+      {/* TODO: checking if all are empty is probably not the best way to do this */}
+      {filters.ratings.length !== 0 || filters.platforms.length !== 0 || filters.genres.length !== 0 || filters.tags.length !== 0 ?
+        <Results showForm={showForm} filters={filters} />
         :
         <Form showResults={showResults} />
       }
