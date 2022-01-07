@@ -2,7 +2,6 @@ import { Collapse, Radio } from 'antd';
 import 'antd/dist/antd.css';
 import React, { createRef, useState } from "react";
 import '../App.css';
-const { Panel } = Collapse;
 
 
 const Form = (props) => {
@@ -19,6 +18,9 @@ const Form = (props) => {
     const handleSubmit = (ratings, platforms, genres, tags) => {
         props.showResults(ratings, platforms, genres, tags);
         console.log("Form submitted!!");
+        // if(all arrays empty) {
+        //     send error message
+        // }
     }
 
     //Loads the arrays with the tags from the checkboxes
@@ -41,20 +43,23 @@ const Form = (props) => {
 
     return (
         <div>
-            <div className="pageDiv">
+            <div className="pageDiv" style={{opacity: 0.8, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://assets.wallpapersin4k.org/uploads/2017/10/Video-Games-Characters-Wallpapers-10.jpg)'}}>
                 <h1 style={{color: 'white'}}>Find your next</h1>
                 <h1 style={{color: 'cyan', paddingTop: 0}}>Favourite Game</h1>
-                <button onClick={scrollToForm}>Begin Questionaire</button>
+                <button className="scrollButton" onClick={scrollToForm}>Begin Questionaire</button>
+            </div>
+            <div className="pageDivExtra">
+
             </div>
 
-            <div ref={scrollDiv}>Form start</div>
+            <div ref={scrollDiv}></div>
             
                 <div>
                     <p>What is your preferred rating?</p>
                     <input type="checkbox" value="0" onChange={(e) => changeButton(e, ratings)}/>E[Everyone]
-                    <input type="checkbox" value="1" onChange={(e) => changeButton(e, ratings)}/>Teen[Ages 13+]
-                    <input type="checkbox" value="2" onChange={(e) => changeButton(e, ratings)}/>Mature[Ages 18+]
-                    <input type="checkbox" value="" onChange={(e) => changeButton(e, ratings)}/>No preference
+                    <input type="checkbox" value="1" onChange={(e) => changeButton(e, ratings)}/>Teen[Ages 13+] 
+                    <input type="checkbox" value="2" onChange={(e) => changeButton(e, ratings)}/>Mature[Ages 18+] 
+                    <input type="checkbox" value="" onChange={(e) => changeButton(e, ratings)}/>No preference 
                 </div>
                 <br/>
 
