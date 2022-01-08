@@ -63,7 +63,7 @@ body {
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(5, 1fr);
   max-height: 100%;
-  padding-top: 10px;
+  padding-top: 5px;
 
 }
 
@@ -71,7 +71,6 @@ body {
   color: white;
   grid-column: 1 / span 4;
   vertical-align: center;
-  padding-top: 10px;
 }
 
 .game-add-button {
@@ -96,6 +95,15 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   font-weight: 100;
+}
+
+.listDiv {
+  padding: 3em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 3em;
 }
 
 /* ------------------------------- form ------------------------------- */

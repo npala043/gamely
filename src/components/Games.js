@@ -19,7 +19,7 @@ const Games = (props) => {
     return (
         <div className="gamesDiv">
             {currGames.length > 0 ?
-                currGames.map(g => <GameCard game={g} key={g.id} />)
+                currGames.map(g => <GameCard game={g} key={g.id} addToFavs={props.addToFavs} />)
                 :
                 <h2>You've reached the end!</h2>}
         </div>
