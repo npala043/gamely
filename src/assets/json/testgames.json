@@ -1,0 +1,274 @@
+[
+  {
+    "id": 0,
+    "slug": "string",
+    "name": "Skyrim",
+    "name_original": "string",
+    "description": "The Elder Scrolls V: Skyrim is an action role-playing game, playable from either a first or third-person perspective. The player may freely roam over the land of Skyrim—an open world environment consisting of wilderness expanses, dungeons, caves, cities, towns, fortresses, and villages.",
+    "metacritic": 0,
+    "metacritic_platforms": [
+      {
+        "metascore": 0,
+        "url": "string"
+      }
+    ],
+    "released": "2021-12-28",
+    "tba": true,
+    "updated": "2021-12-28T21:49:07Z",
+    "background_image": "https://via.placeholder.com/100",
+    "background_image_additional": "string",
+    "website": "http://example.com",
+    "rating": 0,
+    "rating_top": 0,
+    "ratings": {},
+    "reactions": {},
+    "added": 0,
+    "added_by_status": {},
+    "playtime": 0,
+    "screenshots_count": 0,
+    "movies_count": 0,
+    "creators_count": 0,
+    "achievements_count": 0,
+    "parent_achievements_count": "string",
+    "reddit_url": "string",
+    "reddit_name": "string",
+    "reddit_description": "string",
+    "reddit_logo": "http://example.com",
+    "reddit_count": 0,
+    "twitch_count": "string",
+    "youtube_count": "string",
+    "reviews_text_count": "string",
+    "ratings_count": 0,
+    "suggestions_count": 0,
+    "alternative_names": [
+      "string"
+    ],
+    "metacritic_url": "string",
+    "parents_count": 0,
+    "additions_count": 0,
+    "game_series_count": 0,
+    "esrb_rating": {
+      "id": 0,
+      "slug": "everyone",
+      "name": "Everyone"
+    },
+    "platforms": [
+      {
+        "platform": {
+          "id": 0,
+          "slug": "string",
+          "name": "string"
+        },
+        "released_at": "string",
+        "requirements": {
+          "minimum": "string",
+          "recommended": "string"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "slug": "string",
+    "name": "Minecraft",
+    "name_original": "string",
+    "description": "Minecraft is a video game in which players create and break apart various kinds of blocks in three-dimensional worlds. The game's two main modes are Survival and Creative. In Survival, players must find their own building supplies and food. They also interact with blocklike mobs, or moving creatures.",
+    "metacritic": 0,
+    "metacritic_platforms": [
+      {
+        "metascore": 0,
+        "url": "string"
+      }
+    ],
+    "released": "2021-12-28",
+    "tba": true,
+    "updated": "2021-12-28T21:49:07Z",
+    "background_image": "https://via.placeholder.com/100",
+    "background_image_additional": "string",
+    "website": "http://example.com",
+    "rating": 0,
+    "rating_top": 0,
+    "ratings": {},
+    "reactions": {},
+    "added": 0,
+    "added_by_status": {},
+    "playtime": 0,
+    "screenshots_count": 0,
+    "movies_count": 0,
+    "creators_count": 0,
+    "achievements_count": 0,
+    "parent_achievements_count": "string",
+    "reddit_url": "string",
+    "reddit_name": "string",
+    "reddit_description": "string",
+    "reddit_logo": "http://example.com",
+    "reddit_count": 0,
+    "twitch_count": "string",
+    "youtube_count": "string",
+    "reviews_text_count": "string",
+    "ratings_count": 0,
+    "suggestions_count": 0,
+    "alternative_names": [
+      "string"
+    ],
+    "metacritic_url": "string",
+    "parents_count": 0,
+    "additions_count": 0,
+    "game_series_count": 0,
+    "esrb_rating": {
+      "id": 0,
+      "slug": "everyone",
+      "name": "Everyone"
+    },
+    "platforms": [
+      {
+        "platform": {
+          "id": 0,
+          "slug": "string",
+          "name": "string"
+        },
+        "released_at": "string",
+        "requirements": {
+          "minimum": "string",
+          "recommended": "string"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "string",
+    "name": "Heroes of the Storm",
+    "name_original": "string",
+    "description": "Heroes of the Storm is a crossover multiplayer online battle arena video game developed and published by Blizzard Entertainment and released on June 2, 2015, for Microsoft Windows and macOS. ... Blizzard calls the game as a \"hero brawler\" instead of the more common \"multiplayer online battle arena\" (MOBA).",
+    "metacritic": 0,
+    "metacritic_platforms": [
+      {
+        "metascore": 0,
+        "url": "string"
+      }
+    ],
+    "released": "2021-12-28",
+    "tba": true,
+    "updated": "2021-12-28T21:49:07Z",
+    "background_image": "https://via.placeholder.com/100",
+    "background_image_additional": "string",
+    "website": "http://example.com",
+    "rating": 0,
+    "rating_top": 0,
+    "ratings": {},
+    "reactions": {},
+    "added": 0,
+    "added_by_status": {},
+    "playtime": 0,
+    "screenshots_count": 0,
+    "movies_count": 0,
+    "creators_count": 0,
+    "achievements_count": 0,
+    "parent_achievements_count": "string",
+    "reddit_url": "string",
+    "reddit_name": "string",
+    "reddit_description": "string",
+    "reddit_logo": "http://example.com",
+    "reddit_count": 0,
+    "twitch_count": "string",
+    "youtube_count": "string",
+    "reviews_text_count": "string",
+    "ratings_count": 0,
+    "suggestions_count": 0,
+    "alternative_names": [
+      "string"
+    ],
+    "metacritic_url": "string",
+    "parents_count": 0,
+    "additions_count": 0,
+    "game_series_count": 0,
+    "esrb_rating": {
+      "id": 0,
+      "slug": "everyone",
+      "name": "Everyone"
+    },
+    "platforms": [
+      {
+        "platform": {
+          "id": 0,
+          "slug": "string",
+          "name": "string"
+        },
+        "released_at": "string",
+        "requirements": {
+          "minimum": "string",
+          "recommended": "string"
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "string",
+    "name": "Pokemon Diamond",
+    "name_original": "string",
+    "description": "Pokémon Diamond Version and Pearl Version are role-playing games (RPGs) developed by Game Freak and published by Nintendo for the Nintendo DS. With the enhanced remake Pokémon Platinum, the games comprise the fifth installment and fourth generation of the Pokémon series of RPGs. First released in Japan on September 28, 2006, the games were later released to North America, Australia, and Europe over the course of 2007.",
+    "metacritic": 0,
+    "metacritic_platforms": [
+      {
+        "metascore": 0,
+        "url": "string"
+      }
+    ],
+    "released": "2021-12-28",
+    "tba": true,
+    "updated": "2021-12-28T21:49:07Z",
+    "background_image": "https://via.placeholder.com/100",
+    "background_image_additional": "string",
+    "website": "http://example.com",
+    "rating": 0,
+    "rating_top": 0,
+    "ratings": {},
+    "reactions": {},
+    "added": 0,
+    "added_by_status": {},
+    "playtime": 0,
+    "screenshots_count": 0,
+    "movies_count": 0,
+    "creators_count": 0,
+    "achievements_count": 0,
+    "parent_achievements_count": "string",
+    "reddit_url": "string",
+    "reddit_name": "string",
+    "reddit_description": "string",
+    "reddit_logo": "http://example.com",
+    "reddit_count": 0,
+    "twitch_count": "string",
+    "youtube_count": "string",
+    "reviews_text_count": "string",
+    "ratings_count": 0,
+    "suggestions_count": 0,
+    "alternative_names": [
+      "string"
+    ],
+    "metacritic_url": "string",
+    "parents_count": 0,
+    "additions_count": 0,
+    "game_series_count": 0,
+    "esrb_rating": {
+      "id": 0,
+      "slug": "everyone",
+      "name": "Everyone"
+    },
+    "platforms": [
+      {
+        "platform": {
+          "id": 0,
+          "slug": "string",
+          "name": "string"
+        },
+        "released_at": "string",
+        "requirements": {
+          "minimum": "string",
+          "recommended": "string"
+        }
+      }
+    ]
+  }
+]
