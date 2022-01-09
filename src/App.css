@@ -69,7 +69,7 @@ body {
 
 .game-title {
   color: white;
-  grid-column: 1 / span 4;
+  grid-column: 2 / span 3;
   vertical-align: center;
 }
 
@@ -95,6 +95,34 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   font-weight: 100;
+  line-height: 250%;
+}
+
+.social-list {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0.25em 0.75em 0.25em 0.75em;
+  font-size: large;
+  margin: 0 auto;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+}
+
+.social-link {
+  line-height: normal;
+  padding-top: 0.6em;
+}
+
+.social-link:hover {
+  cursor: pointer;
+}
+
+ImTwitch {
+  display: block;
 }
 
 .listDiv {
@@ -102,8 +130,13 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 3em;
+}
+
+/* styling colour inline wasn't working for message attr, so I resorted to this */
+div.ant-notification-notice-message {
+  color: white;
 }
 
 /* ------------------------------- form ------------------------------- */

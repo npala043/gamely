@@ -22,11 +22,18 @@ const Results = (props) => {
         setFavs(currFavs);
     }
 
-    const openNotificationWithIcon = type => {
+    const openNotificationWithIcon = (type) => {
         notification[type]({
             message: 'Error',
-            description:
-                'Already added to favourites list!',
+            description: 'Already added to list!',
+            duration: 3,
+            style: {
+                backgroundColor: "#2E2E2E",
+                fontFamily: "Rubik",
+                fontWeight: "normal",
+                color: "white",
+                closeIcon: (<div></div>)
+            }
         });
     };
 
@@ -67,7 +74,6 @@ const Results = (props) => {
                     requests.push(axios.get(`${url}/${response.data.results[i].id}${key}`));
                 }
                 axios.all(requests).then(axios.spread((...responses) => {
-                    console.log(responses);
                     setGames(responses);
                 }))
             })
