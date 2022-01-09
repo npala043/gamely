@@ -74,13 +74,13 @@ const Form = (props) => {
 
                 <div>
                     <h2 style={{color: 'white', fontWeight: 'bold'}}>How many players?</h2>
-                    <input id="players1" type="checkbox" value="singleplayer" onChange={(e) => changeButton(e, tags)}/>
+                    <input id="players1" type="checkbox" value="31" onChange={(e) => changeButton(e, tags)}/>
                     <label className="formButton"  for="players1">Singleplayer</label>
 
-                    <input id="players2" type="checkbox" value="co-op" onChange={(e) => changeButton(e, tags)}/>
+                    <input id="players2" type="checkbox" value="18" onChange={(e) => changeButton(e, tags)}/>
                     <label className="formButton"  for="players2">Co-op(up to 4 players)</label>
                     
-                    <input id="players3" type="checkbox" value="multiplayer" onChange={(e) => changeButton(e, tags)}/>
+                    <input id="players3" type="checkbox" value="7" onChange={(e) => changeButton(e, tags)}/>
                     <label className="formButton"  for="players3">Online Multiplayer</label>
                     
                     <input id="players4" type="checkbox" value="" onChange={(e) => changeButton(e, tags)}/>
@@ -91,10 +91,10 @@ const Form = (props) => {
                
                 <div>
                     <h2 style={{color: 'grey', fontWeight: 'bold'}}>How old do you prefer your games?</h2>
-                    <input id="age1" type="checkbox" value="2010-01-01" disabled onChange={(e) => changeButton(e, tags)}/>
+                    <input id="age1" type="checkbox" value="0" disabled onChange={(e) => changeButton(e, tags)}/>
                     <label className="formButton"  for="age1">Classic (6 years and older)</label>
 
-                    <input id="age2" type="checkbox" value="2018-12-31" disabled onChange={(e) => changeButton(e, tags)}/>
+                    <input id="age2" type="checkbox" value="1" disabled onChange={(e) => changeButton(e, tags)}/>
                     <label className="formButton"  for="age2">Recent (Less than 5 years old)</label>
 
                     <input id="age3" type="checkbox" value="" disabled onChange={(e) => changeButton(e, tags)}/>
