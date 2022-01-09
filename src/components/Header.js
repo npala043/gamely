@@ -24,7 +24,7 @@ const Header = (props) => {
                 maskClosable={true}
                 onCancel={hideModal}
                 footer={null}>
-                <p>Gamely is a React webapp which generates a list of recommended games based on a short survey. Recommendations are created based on preferences for: ESRB rating, recent vs. classic, player number, genres, and platforms.</p>
+                <p>Gamely is a React webapp which generates a list of recommended games queried from the <a href="https://rawg.io/apidocs">RAWG API</a> based on a short survey. Recommendations are created based on preferences for: ESRB rating, recent vs. classic, player number, genres, and platforms.</p>
                 <h3>Packages & Libraries Used</h3>
                 <ul>
                     <li><a href="https://github.com/ant-design/ant-design">Ant Design</a></li>
