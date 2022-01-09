@@ -20,7 +20,6 @@ const Form = (props) => {
     //Takes user to showResults
     const handleSubmit = (ratings, platforms, genres, tags) => {
         props.showResults(ratings, platforms, genres, tags);
-        console.log("Form submitted!!");
         // if(all arrays empty) {
         //     send error message
         // }
@@ -41,7 +40,7 @@ const Form = (props) => {
 
     //Scroll to form
     const scrollToForm = () => {
-        scrollDiv.current.scrollIntoView({ behaviour: "smooth" });
+        scrollDiv.current.scrollIntoView();
     }
 
     return (

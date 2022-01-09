@@ -1,13 +1,44 @@
 import { React, useEffect, useState } from "react";
 import * as cloneDeep from 'lodash/cloneDeep';
 import axios from "axios";
+import { notification } from "antd";
 
 import Games from "./Games";
 import List from "./List";
 
 const Results = (props) => {
 
+    const [favs, setFavs] = useState([]);
+
+    const addToFavs = (game) => {
+        for (let i = 0; i < favs.length - 1; i++) {
+            if (favs[i].id === game.id) {
+                openNotificationWithIcon('error');
+                return;
+            }
+        }
+        let currFavs = cloneDeep(favs);
+        currFavs.push(game);
+        setFavs(currFavs);
+    }
+
+    const openNotificationWithIcon = (type) => {
+        notification[type]({
+            message: 'Error',
+            description: 'Already added to list!',
+            duration: 3,
+            style: {
+                backgroundColor: "#2E2E2E",
+                fontFamily: "Rubik",
+                fontWeight: "normal",
+                color: "white",
+                closeIcon: (<div></div>)
+            }
+        });
+    };
+
     const [games, setGames] = useState([]);
+
 
     const url = 'https://api.rawg.io/api/games';
     const key = '?key=41501910137e44f584184130089ac053';
@@ -22,21 +53,18 @@ const Results = (props) => {
             for (let i = 0; i < props.filters.platforms.length; i++, fullUrl = fullUrl.concat(',')) {
                 fullUrl = fullUrl.concat(`${props.filters.platforms[i]}`);
             }
-            fullUrl = fullUrl.slice(0, fullUrl.length - 1);
         }
         if (props.filters.genres.length > 0) {
             fullUrl = fullUrl.concat('&genres=');
             for (let i = 0; i < props.filters.genres.length; i++, fullUrl = fullUrl.concat(',')) {
                 fullUrl = fullUrl.concat(`${props.filters.genres[i]}`);
             }
-            fullUrl = fullUrl.slice(0, fullUrl.length - 1);
         }
         if (props.filters.tags.length > 0) {
             fullUrl = fullUrl.concat('&tags=');
             for (let i = 0; i < props.filters.tags.length; i++, fullUrl = fullUrl.concat(',')) {
                 fullUrl = fullUrl.concat(`${props.filters.tags[i]}`);
             }
-            fullUrl = fullUrl.slice(0, fullUrl.length - 1);
         }
 
         axios.get(fullUrl)
@@ -60,15 +88,13 @@ const Results = (props) => {
 
     return (
         <div className="resultsPage">
-            <div className= "resultsTitle">
-                <h1 style={{color: 'white'}}>Shuffle through some</h1>
-                <h1 style={{color: 'cyan', paddingTop: 0}}>new games!</h1>
-            </div>
-            <Games games={games} />
+            <h1 style={{ color: 'white' }}>Shuffle through some</h1>
+            <h1 style={{ color: 'cyan', paddingTop: 0 }}>new games!</h1>
+            <Games games={games} addToFavs={addToFavs} />
             <div>
-                <button style={{width: 106, color: 'white', backgroundColor: 'black', borderColor: '#945EE8'}} onClick={props.showForm}>Start over</button> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <button style={{width: 116,color: 'black'}} onClick={shuffle}>Shuffle me!</button>
+                <button style={{ color: 'white', backgroundColor: 'black', borderColor: 'purple' }} onClick={props.showForm}>Start over</button> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <button onClick={shuffle}>Shuffle me!</button>
             </div>
-            <List />
+            <List favs={favs} />
         </div>
     )
 
