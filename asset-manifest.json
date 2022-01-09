@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/gamely/static/css/main.5b369ba7.css",
+    "main.js": "/gamely/static/js/main.4797d78b.js",
+    "static/js/787.a86e7bd0.chunk.js": "/gamely/static/js/787.a86e7bd0.chunk.js",
+    "static/media/background.png": "/gamely/static/media/background.d1e2140c8b22b0ac18f3.png",
+    "static/media/MobileButton.png": "/gamely/static/media/MobileButton.d2c673fd74f26739c073.png",
+    "static/media/PCButton.png": "/gamely/static/media/PCButton.3bfaadd322a4ce6f3d98.png",
+    "static/media/SwitchButton.png": "/gamely/static/media/SwitchButton.a9bf5e2853fbb48b0911.png",
+    "static/media/XboxButton.png": "/gamely/static/media/XboxButton.1c0a47b88eb53c46a4a0.png",
+    "static/media/PlayStationButton.png": "/gamely/static/media/PlayStationButton.66c03a880aef20a40405.png",
+    "static/media/gamely_logo_rough.png": "/gamely/static/media/gamely_logo_rough.eb772f611b198ba5e47e.png",
+    "index.html": "/gamely/index.html",
+    "main.5b369ba7.css.map": "/gamely/static/css/main.5b369ba7.css.map",
+    "main.4797d78b.js.map": "/gamely/static/js/main.4797d78b.js.map",
+    "787.a86e7bd0.chunk.js.map": "/gamely/static/js/787.a86e7bd0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b369ba7.css",
+    "static/js/main.4797d78b.js"
+  ]
+}
