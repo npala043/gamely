@@ -185,6 +185,10 @@ h2 {
   color: white;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 button {
 /* Auto Layout */
 flex-direction: row;

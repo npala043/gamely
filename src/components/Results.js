@@ -11,15 +11,13 @@ const Results = (props) => {
     const [favs, setFavs] = useState([]);
 
     const addToFavs = (game) => {
-        for (let i = 0; i < favs.length - 1; i++) {
-            if (favs[i].id === game.id) {
-                openNotificationWithIcon('error');
-                return;
-            }
+        if (!favs.includes(game)) {
+            let currFavs = cloneDeep(favs);
+            currFavs.push(game);
+            setFavs(currFavs);
+        } else {
+            openNotificationWithIcon('error');
         }
-        let currFavs = cloneDeep(favs);
-        currFavs.push(game);
-        setFavs(currFavs);
     }
 
     const openNotificationWithIcon = (type) => {
