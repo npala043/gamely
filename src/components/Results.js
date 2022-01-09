@@ -60,11 +60,13 @@ const Results = (props) => {
 
     return (
         <div className="resultsPage">
-            <h1 style={{color: 'white'}}>Shuffle through some</h1>
-            <h1 style={{color: 'cyan', paddingTop: 0}}>new games!</h1>
+            <div className= "resultsTitle">
+                <h1 style={{color: 'white'}}>Shuffle through some</h1>
+                <h1 style={{color: 'cyan', paddingTop: 0}}>new games!</h1>
+            </div>
             <Games games={games} />
             <div>
-                <button style={{color: 'white', backgroundColor: 'black', borderColor: 'purple'}} onClick={props.showForm}>Start over</button> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <button onClick={shuffle}>Shuffle me!</button>
+                <button style={{width: 106, color: 'white', backgroundColor: 'black', borderColor: '#945EE8'}} onClick={props.showForm}>Start over</button> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <button style={{width: 116,color: 'black'}} onClick={shuffle}>Shuffle me!</button>
             </div>
             <List />
         </div>
