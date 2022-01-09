@@ -19,7 +19,7 @@ const Results = (props) => {
             openNotificationWithIcon('error');
         }
     }
-
+    
     const openNotificationWithIcon = (type) => {
         notification[type]({
             message: 'Error',
