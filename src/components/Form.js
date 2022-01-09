@@ -57,7 +57,7 @@ const Form = (props) => {
             <div ref={scrollDiv}></div>
             
                 <div>
-                    <h2 style={{color: 'grey', fontWeight: 'bold'}}>What is your preferred rating?</h2>
+                    <h2 className="formTitle" style={{color: 'grey', fontWeight: 'bold'}}>What is your preferred rating?</h2>
                     <input id="rating1" type="checkbox" value="0" disabled onChange={(e) => changeButton(e, ratings)}/>
                     <label className="formButton"  for="rating1">E[Everyone]</label>
 
@@ -73,7 +73,7 @@ const Form = (props) => {
                 <br/>
 
                 <div>
-                    <h2 style={{color: 'white', fontWeight: 'bold'}}>How many players?</h2>
+                    <h2 className="formTitle" style={{color: 'white', fontWeight: 'bold'}}>How many players?</h2>
                     <input id="players1" type="checkbox" value="31" onChange={(e) => changeButton(e, tags)}/>
                     <label className="formButton"  for="players1">Singleplayer</label>
 
@@ -90,7 +90,7 @@ const Form = (props) => {
                 <br/>
                
                 <div>
-                    <h2 style={{color: 'grey', fontWeight: 'bold'}}>How old do you prefer your games?</h2>
+                    <h2 className="formTitle" style={{color: 'grey', fontWeight: 'bold'}}>How old do you prefer your games?</h2>
                     <input id="age1" type="checkbox" value="0" disabled onChange={(e) => changeButton(e, tags)}/>
                     <label className="formButton"  for="age1">Classic (6 years and older)</label>
 
@@ -103,7 +103,7 @@ const Form = (props) => {
                 <br/>
 
                 <div className="tagList">
-                    <h2 style={{color: 'white', fontWeight: 'bold'}}>Select your favourite genre(s)</h2>
+                    <h2 className="formTitle" style={{color: 'white', fontWeight: 'bold'}}>Select your favourite genre(s)</h2>
                     <input type="checkbox" id="tag1" value="4" onChange={(e) => changeButton(e, genres)}/>
                     <label className="formButton"  for="tag1">Action</label>
 
@@ -168,7 +168,7 @@ const Form = (props) => {
                 <br/>
 
                 <div>
-                    <h2 style={{color: 'white', fontWeight: 'bold'}}>Which console(s)?</h2>
+                    <h2 className="formTitle" style={{color: 'white', fontWeight: 'bold'}}>Which console(s)?</h2>
                     <input type="checkbox" id="console1" value="3" onChange={(e) => changeButton(e, platforms)}/>
                     <label className="consoleButton"  for="console1"><img src={MobileButton}/></label>
 
